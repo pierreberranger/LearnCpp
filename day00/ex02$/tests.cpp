@@ -60,6 +60,9 @@ int		main( void ) {
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
+	//added to check if bonus is not causing any error.
+	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::checkAmount ) );
+
 	return 0;
 }
 
